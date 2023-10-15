@@ -12,7 +12,7 @@ interface PostsType {
 }
 
 async function getData() {
-  const res = await fetch(`${process.env.VERCEL_URL}/api/posts`)
+  const res = await fetch('https://v3-supri.vercel.app/api/posts')
   return res.json()
 }
 
