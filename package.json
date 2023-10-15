@@ -14,6 +14,7 @@
     "@next/mdx": "^13.5.4",
     "@types/mdx": "^2.0.8",
     "image-size": "^1.0.2",
+    "lucide-react": "^0.287.0",
     "next": "13.5.4",
     "react": "^18",
     "react-dom": "^18",
