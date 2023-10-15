@@ -1,7 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-
+import { P } from './(post)/components/p'
+import { A } from './(post)/components/a'
+import { GithubIcon, InstagramIcon, LinkedinIcon } from 'lucide-react'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -20,6 +22,51 @@ export default function RootLayout({
         <main className="max-w-2xl mx-auto p-6">
           {children}
         </main>
+        <footer className="px-6 text-zinc-700">
+          <div>
+            <P>Find me on</P>
+            <div className="flex gap-4">
+              <A href="https://www.instagram.com/muhsupriazis/">
+                <div className="flex gap-1">
+                  <InstagramIcon width={18} />
+                  <span>
+                    Instagram
+                  </span>
+                </div>
+              </A>
+              <A href="https://www.instagram.com/muhsupriazis/">
+                <div className="flex gap-1">
+                  <GithubIcon width={18} />
+                  <span>
+                    Github
+                  </span>
+                </div>
+              </A>
+              <A href="https://www.instagram.com/muhsupriazis/">
+                <div className="flex gap-1">
+                  <LinkedinIcon width={18} />
+                  <span>
+                    LinkedId
+                  </span>
+                </div>
+              </A>
+            </div>
+            <P>
+              My inbox is always open. Whether you have a question or just want to say hi,
+              I will try my best to get back to you!
+            </P>
+          </div>
+          <div className="py-7">
+            <p className="text-zinc-400 text-sm font-light">
+              Inspired design by
+              <A href="https://antfu.me/"> Anthony Fu </A>
+            </p>
+            <p className="text-zinc-400 text-sm py-2 font-light">
+              Build by
+              <A href="https://antfu.me/"> Muh. Supri Azis </A>
+            </p>
+          </div>
+        </footer>
       </body>
     </html>
   )
