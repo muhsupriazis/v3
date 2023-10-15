@@ -1,0 +1,54 @@
+[
+  {
+    "year": "2022",
+    "posts": [
+      {
+        "slug": "belajar-react-dasar",
+        "title": "Belajar React Dasar",
+        "date": "2022/10/02",
+        "category": "Programming"
+      },
+      {
+        "slug": "how-to-make-component",
+        "title": "How to Make Component",
+        "date": "2022/09/03",
+        "category": "Programming"
+      },
+      {
+        "slug": "introdution",
+        "title": "Introdution",
+        "date": "2022/08/03",
+        "category": "Self Improment"
+      },
+      {
+        "slug": "server-side",
+        "title": "Server Side Rendering (SSR)",
+        "date": "2022/04/11",
+        "category": "Programming"
+      }
+    ]
+  },
+  {
+    "year": "2023",
+    "posts": [
+      {
+        "slug": "client-side",
+        "title": "Client Side",
+        "date": "2023/5/10",
+        "category": "Programming"
+      },
+      {
+        "slug": "javascript-basic",
+        "title": "Javascript Basic",
+        "date": "2023/08/03",
+        "category": "Programming"
+      },
+      {
+        "slug": "nextjs-frontend-framework",
+        "title": "Nextjs Frontend Framework",
+        "date": "2023/04/11",
+        "category": "Programming"
+      }
+    ]
+  }
+]
