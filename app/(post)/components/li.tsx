@@ -12,6 +12,7 @@ export function LI({ children }) {
     [ul_&]:before:absolute
     [ul_&]:before:-ml-4
     text-gray-700
+    text-sm md:text-base
   `}
     >
       {children}

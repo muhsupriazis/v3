@@ -16,6 +16,7 @@ export function Figure({ wide = false, children }) {
       before:left-[-1000px]
       before:absolute
       before:z-[-1]
+      text-sm md:text-base
     `
         : ""
     }
