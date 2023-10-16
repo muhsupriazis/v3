@@ -57,14 +57,16 @@ export default function RootLayout({
             </P>
           </div>
           <div className="py-7">
-            <p className="text-zinc-400 text-sm font-light">
-              Inspired design by
-              <A href="https://antfu.me/"> Anthony Fu </A>
-            </p>
-            <p className="text-zinc-400 text-sm py-2 font-light">
-              Build by
-              <A href="https://antfu.me/"> Muh. Supri Azis </A>
-            </p>
+            <div>
+              <p className="text-zinc-400 text-sm font-light">
+                Inspired design by
+                <A href="https://antfu.me/"> Anthony Fu </A>
+              </p>
+              <p className="text-zinc-400 text-sm py-2 font-light">
+                Build by
+                <A href="https://antfu.me/"> Muh. Supri Azis </A>
+              </p>
+            </div>
           </div>
         </footer>
       </body>
