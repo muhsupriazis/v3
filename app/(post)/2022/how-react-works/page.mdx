@@ -1,0 +1,55 @@
+export const metadata = {
+  title: 'Memahami Proses Render pada ReactJS',
+  description: 'Memahami Proses Render pada ReactJS dengan pendekatan pengalaman pribadi dan dokumentasi',
+  openGraph: {
+    title: 'Memahami Proses Render pada ReactJS',
+    description: 'Memahami Proses Render pada ReactJS dengan pendekatan pengalaman pribadi dan dokumentasi',
+    images: [{ url: 'https://miro.medium.com/v2/resize:fit:1400/format:webp/1*Ly3DHrx8xlrU_US-AiReyw.png' }]
+  }
+}
+
+# Memahami Proses Render pada ReactJS
+
+Kali ini, saya akan sedikit menjelaskan bagaimana proses render halaman pada [reactjs](https://react.dev/). Sebenarnya, perihal ini sudah ditulis dan diterangkan sendiri di dokumentasi resmi [reactjs](https://react.dev/). Kalian bisa membacanya [disini](https://react.dev/).
+
+Tapi, saya akan mencoba menjelaskanya sepengetahuan saya. Pada dasarnya terdapat dua hal yang memicu render pada [reactjs](https://react.dev/). Pertama, _initial render_ (dokumentasi resmi [reactjs](https://react.dev/) menyebutnya seperti itu) dan yang kedua adalah pada saat state pada [reactjs](https://react.dev/) berubah.
+
+Pada saat pertama kali meng-_install_ [reactjs](https://react.dev/) entah itu menggunakan `create-react-app` atau [vite](https://vitejs.dev/), kita sering menjumpai _block code_ dibawah pada file `main.jsx/tsx`.
+
+```jsx
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <h1>Hello World</h1>
+  </React.StrictMode>,
+)
+```
+
+Ini merupakan _initial render_ atau render pada saat pertama kali website dijalankan. Lalu proses apa yang terjadi? jika kalian sudah belajar [JavaScript DOM](https://www.w3schools.com/js/js_htmldom.asp) atau Document Object Model sintak diatas akan terasa sangat familiar. Apalagi jika saya menambahkan file `index.html` yang tersisa seperti dibawah ini.
+
+```html
+ <body>
+   <div id="root"></div>
+   <script type="module" src="/src/main.tsx"></script>
+ </body>
+```
+
+Pertama [ReactDom](https://legacy.reactjs.org/docs/react-dom.html) akan menginisialisasi `div` dengan `id root` sebagai root element [react](https://react.dev/) yang akan digunakan untuk menginject atau memasukan kode [react](https://react.dev/) yang akan dibangun. Setelah proses inisialisasi kita menggunakan _method_ render untuk memasukan element `h1` kedalam root element pada [reactjs](https://react.dev/). Dalam penulisan vanilla [JavaScript DOM](https://www.w3schools.com/js/js_htmldom.asp) kode diatas dapat ditulis seperti berikut.
+
+```js
+const root = document.getElementById('root');
+const heading = document.createElement('h1');
+const text = document.createTextNode('Hello World');
+heading.appendChild(text);
+root.appendChild(heading);
+```
+Dengan bantuan library [reactjs](https://react.dev/) dan [babeljs](https://babeljs.io/) sebagai compailer sintak diatas bisa disederhanakan dengan menggunakan sintak `jsx`. Namun, ini merupakan pembahasan yang berbeda dengan apa yang akan kita bahasa kali ini.
+
+Proses yang ingin saya sampaikan adalah pertama _source code_ berupa sintak `jsx` yang sudah disediakan akan compailer kemudian dirender dihalaman web browser.
+
+Sebagai contoh sederhana yang juga tertulis didokumetasi resmi [reactjs](https://react.dev/) adalah _study case_ pelayan yang mengirimkan pesanan tamu kedapur (Trigger), kemudian proses menyiapkan pesanan didapar (Render), setelah itu pelayan kembali membawakan pesanan ke tamu (Commit).
+
+Jadi proses perubahan tampilan pada web browser melalui tiga tahap tersebut. ini dilakukan pada saat initial render dan pada saat perubahan state. Lalu bagaimana proses render terjadi pada saat perubahan state?
+
+Sama halnya dengan initial render, state has been updated juga mengalami tiga proses tersebut. Jika tamu mengubah pesanan yang telah disediakan palayan akan kembali kedapur untuk melakukan render dan kemudian kembali membawa pesanan yang telah di ubah untuk ditampilkan ke web browser.
+
+Hal yang menarik pada [reactjs](https://react.dev/) adalah kerena [react](https://react.dev/) hanya akan mengubah element yang memiliki perubaha sehingga proses perubahan pada web browser berjalan cepat. Web Browser tidak perlu lagi mereload halaman untuk menampilkan hasil perubaha state tersebut.

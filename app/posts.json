@@ -7,6 +7,12 @@
         "title": "Muhammad Supri",
         "date": "2022/09/06",
         "category": "About Me"
+      },
+      {
+        "slug": "how-react-works",
+        "title": "Understanding How ReactJS Works",
+        "date": "2022/10/16",
+        "category": "React"
       }
     ]
   }
