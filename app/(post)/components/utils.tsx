@@ -18,6 +18,7 @@ export function withHeadingId(children) {
                 [span:hover_&]:visible
                 font-mono
                 font-normal
+                text-sm md:text-base
                 text-gray-400
                 hover:text-gray-600
               `}
