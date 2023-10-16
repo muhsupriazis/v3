@@ -22,7 +22,7 @@ export default function RootLayout({
         <main className="max-w-2xl mx-auto p-6">
           {children}
         </main>
-        <footer className="px-6 text-zinc-700">
+        <footer className="px-6 max-w-2xl mx-auto">
           <div>
             <P>Find me on</P>
             <div className="flex gap-4">

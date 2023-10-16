@@ -1,6 +1,6 @@
 import { A } from "./components/a";
 
-export default function PostLayout({children}) {
+export default async function PostLayout({children}) {
   return (
     <article>
       {children}

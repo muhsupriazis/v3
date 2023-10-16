@@ -9,6 +9,12 @@
         "category": "Programming"
       },
       {
+        "slug": "new-post",
+        "title": "New Posts",
+        "date": "2022/10/02",
+        "category": "Self Improment"
+      },
+      {
         "slug": "how-to-make-component",
         "title": "How to Make Component",
         "date": "2022/09/03",
