@@ -15,5 +15,16 @@
         "category": "React"
       }
     ]
+  },
+  {
+    "year": "2023",
+    "posts": [
+      {
+        "slug": "how-to-win-friends-and-influence-people",
+        "title": "Buku: How To Win Friends & Influence People",
+        "date": "2023-10-12",
+        "category": "Self Improvement"
+      }
+    ]
   }
 ]
